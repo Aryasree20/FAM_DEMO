@@ -7,9 +7,26 @@ from collections.abc import Awaitable, Callable, Mapping
 from dataclasses import dataclass
 from datetime import date
 from typing import Annotated, Any, Literal
-
 from pydantic import AfterValidator, BaseModel, ConfigDict, Field
+from typing import Any, Callable, Dict
+from app.tools.expense_tools import (
+    add_expense,
+    get_expense_summary,
+)
 
+from app.tools.commitment_tools import (
+    create_commitment,
+    search_commitments,
+    update_commitment,
+)
+
+from app.tools.dependency_tools import (
+    create_dependency,
+)
+
+from app.tools.priority_tools import (
+    get_family_priorities,
+)
 
 def _validate_iso_date(value: str) -> str:
     """Reject impossible calendar dates while preserving the ISO string for services."""

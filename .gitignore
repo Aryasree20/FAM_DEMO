@@ -27,3 +27,4 @@ frontend/.vite/
 *.log
 *.sqlite3
 *.db
+demofam_venv/

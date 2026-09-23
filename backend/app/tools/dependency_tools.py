@@ -3,6 +3,9 @@
 from __future__ import annotations
 
 from typing import Any
+from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession
+from app.models.commitment_dependency import CommitmentDependency
 
 
 # Keep relationship rules and cycle detection in the dedicated dependency service.

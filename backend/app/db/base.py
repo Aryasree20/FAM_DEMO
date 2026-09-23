@@ -1,6 +1,5 @@
-"""SQLAlchemy declarative base registration.
+from sqlalchemy.orm import DeclarativeBase
 
-TODO:
-- Define the declarative base.
-- Import every model so Alembic can discover complete metadata.
-"""
+
+class Base(DeclarativeBase):
+    pass
