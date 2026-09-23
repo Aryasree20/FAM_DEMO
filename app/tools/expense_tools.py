@@ -2,6 +2,11 @@
 
 from __future__ import annotations
 
+from datetime import date
+from decimal import Decimal
+from sqlalchemy import func, select
+from sqlalchemy.ext.asyncio import AsyncSession
+from app.models.expense import Expense
 from typing import Any
 
 
